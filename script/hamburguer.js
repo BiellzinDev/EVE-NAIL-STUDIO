@@ -1,16 +1,7 @@
-const btnHamburguer = document.querySelector(".btn-hamburguer")
-const listaNav = document.querySelector(".lista")
-const btnOpen = document.querySelector(".open")
-const closeIcon = document.querySelector(".close")
+const menuOff = document.querySelector(".menu-off")
+        const hamburguerMenu = document.querySelector(".hamburguer-menu")
 
-btnHamburguer.addEventListener("click", () =>{
-    listaNav.classList.add("active")
-    btnOpen.style.display = 'none'
-    closeIcon.style.display = 'block'
-})
-
-closeIcon.addEventListener("click", () =>{
-    listaNav.classList.remove("active")
-    btnOpen.style.display = 'block'
-    closeIcon.style.display = 'none'
-})
+        hamburguerMenu.addEventListener("click",() =>{
+            hamburguerMenu.classList.toggle('active');
+            menuOff.classList.toggle('active');
+        })
