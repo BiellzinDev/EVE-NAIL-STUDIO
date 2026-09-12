@@ -5,3 +5,5 @@ const menuOff = document.querySelector(".menu-off")
             hamburguerMenu.classList.toggle('active');
             menuOff.classList.toggle('active');
         })
+        let x = 2+3
+        console.log(x)

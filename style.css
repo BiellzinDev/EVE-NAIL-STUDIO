@@ -117,22 +117,78 @@ main{
 }
 .box-service{
     width: 100%;
+    justify-content: initial;
+    overflow-x: auto;
     gap: 1rem;
-    justify-content: center;
     padding: .2rem;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
 }
-.limiter{
+/* Cria a caixa que segura os marcadores de posição */
+.box-service::scroll-marker-group{
+    width: 100%;
+    padding: 1rem 0;
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    gap: .5rem;
+}
+/* Cria o marcador de posição do carrosel */
+.box-unhas::scroll-marker{
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--rose-claro);
+    border-radius: 50%;
+}
+/* Aplica cor na posição da imagem do carrosel */
+.box-unhas::scroll-marker:target-current{
+    background-color: var(--rose);
+}
+/* Remove rolagem do navegador no carrosel horizontal */
+.box-service::-webkit-scrollbar{
+    display: none;
+}
+/* Cria os botões de rolagem no carrosel */
+.box-service::scroll-button(right), .box-service::scroll-button(left){
+    content: '>';
+    border: none;
+    background: var(--rose);
+    font-size: 2rem;
+    color: var(--pele);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor:pointer;
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: right center;
+}
+/* Cria o botão de rolagem esquerdo */
+.box-service::scroll-button(left){
+    content: '<';
+    position-area: left center;
+}
+/* Quando a rolagem chega ao limite aplica opacidade */
+.box-service::scroll-button(right):disabled, .box-service::scroll-button(left):disabled{
+    opacity: .5;
+    cursor: auto;
 }
 .box-unhas{
+    scroll-snap-align: start;
+    flex: 0 0 20rem;
+    height: 16rem;
     flex-direction: column;
-    width: 160px;
-    height: 204px;
     border-radius: 15px;
     color: white;
     justify-content: flex-end;
     text-align: center;
+}
+@media(max-width:500px){
+    .box-unhas{
+        flex: 0 0 100%;
+    }
 }
 .box-1{
     background-image: url(./Images/unhas-floridas.webp);
@@ -242,13 +298,12 @@ main{
 .mapa{
     width: 100%;
     flex-direction: column;
-    height: 25rem;
     background-color: var(--rose-claro);
     border-radius: 15px 15px 0;
     position: relative;
 }
 .mapa iframe{
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
 }
 .mapa p{
     font-size: 12px;
@@ -256,51 +311,7 @@ main{
     padding-bottom: 5rem;
 }
 .mapa h2{
-    padding-bottom: 1rem;
-}
-.star-1{
-    position: absolute;
-    bottom: 20%;
-}
-.star1{
-    width: 3.68rem;
-    height: 4.18rem;
-}
-.star-2{
-    position: absolute;
-    bottom: 25%;
-    left: -3%;
-}
-.star2{
-    width: 3.68rem;
-    height: 4.18rem;
-}
-.star-3{
-    position: absolute;
-    right: -3%;
-    bottom: 25%;
-}
-.star3{
-    width: 3.68rem;
-    height: 4.68rem;
-}
-.star-4{
-    position: absolute;
-    top: 8%;
-    left: 11%;
-}
-.star4{
-    width: 3.68rem;
-    height: 4.68rem;
-}
-.star-5{
-    position: absolute;
-    top: -7%;
-    right: 0;
-}
-.star5{
-    width: 4.8rem;
-    height: 4.8rem;
+    padding: 1rem 0;
 }
 .nav{
     justify-content: flex-end;
@@ -355,74 +366,6 @@ main{
 .inicio{
     margin-top: 5rem;
 }
-.img-nav img{
-    width: 3.1rem;
-}
-.img-1{
-    position: absolute;
-    top: 0;
-}
-.img-2 img{
-    width: 16.5rem;
-    height: 8rem;
-}
-.img-2{
-    position: absolute;
-    left: -10%;
-    top: -8%;
-}
-.img-2 img{
-    width: 16.5rem;
-}
-.img-2{
-    position: absolute;
-    left: -10%;
-    top: -10%;
-}
-.img-3 img{
-    width: 157px;
-    height: 10rem;
-}
-.img-3{
-    position: absolute;
-    right: -10%;
-    top: 10%;
-}
-.img-4 img{
-    width: 11.1rem;
-    height: 11.25rem;
-}
-.img-4{
-    position: absolute;
-    left: 10%;
-    top: 55%;
-}
-.img-5 img{
-    width: 9.1rem;
-    height: 10rem;
-}
-.img-5{
-    position: absolute;
-    right: 0;
-    top: 60%;
-}
-.img-6 img{
-    width: 9.8rem;
-    height: 10rem;
-}
-.img-6{
-    position: absolute;
-    left: -10%;
-    bottom: -4%;
-}
-.img-7 img{
-    width: 14.3rem;
-}
-.img-7{
-    position: absolute;
-    right: -20%;
-    bottom: 0;
-}
 .box-studio img{
     width: 21.3rem;
     border-radius: 15px;
@@ -432,13 +375,12 @@ main{
     flex-direction: column;
     gap: 1rem;
     width: 90%;
-    padding-bottom: 3rem;
 }
 .title-studio,.title-servico,.title-contato{
     width: 100%;
     text-align: left;
     font-size: 1.5rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     text-transform: uppercase;
 }
 .box-servico img{
