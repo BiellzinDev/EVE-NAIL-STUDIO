@@ -21,6 +21,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: sans-serif,Arial, Helvetica, sans-serif;
     width: 100%;
@@ -29,6 +32,10 @@ body{
     background-color: var(--fundo);
     overflow-x: hidden;
 }
+p{
+    min-width: 1rem;
+    color: var(--rose);
+}
 .flex-items-center-justfy-center{
     display: flex;
     align-items: center;
@@ -36,15 +43,15 @@ body{
 }
 header{
     width: 100%;
-    height: 4rem;
+    height: fit-content;
     background: var(--fundo);
     border-radius: 0 0 15px 15px;
     position: absolute;
 }
 .text-logo {
     background-image: url(./Images/Texto-Logo.webp);
-    width: 60%;
-    height: 3rem;
+    width: 70%;
+    height: 3.5rem;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -54,7 +61,7 @@ header{
     justify-content: flex-start;
 }
 .limiter-logo img{
-    width: 2rem;
+    width: 5rem;
     border-radius: 50%;
 }
 main{
@@ -79,6 +86,8 @@ main{
     font-weight: 600;
 }
 .hero p{
+    text-shadow: 0px 0px 20px rgba(233,69,96,1), 2px 2px 4px rgba(0,0,0,0.3), 2px 2px 4px rgba(0,0,0,0.3), 2px 2px 4px rgba(0,0,0,0.3);
+    color: white;
     text-align: center;
     padding: 1rem 0 1rem;
 }
@@ -111,9 +120,10 @@ main{
     height: 3.1rem;
     border-radius: 10px;
     border: none;
-    background: var(--btn);
+    background: var(--rose);
     font-weight: 700;
     font-size: 1rem;
+    color: white;
 }
 .box-service{
     width: 100%;
@@ -314,15 +324,16 @@ main{
     padding: 1rem 0;
 }
 .nav{
-    justify-content: flex-end;
+    justify-content: space-evenly;
+    /* gap: .8rem; */
     width: 100%;
     position: fixed;
+    height: fit-content;
     bottom:0 ;
     z-index: 4;
-    background-color: var(--fundo);
+    background-color: var(--fundo-claro);
     border-radius: 10px 10px 0 0;
-    padding: .2rem 0;
-    /* display: none; */
+    padding: .5rem 0;
 
 }
 .btn-hamburguer{
@@ -446,43 +457,14 @@ button{
     cursor: pointer;
 }
 
-.menu-off .active{
-    display: flex;
+.nav a{
+    text-decoration: none;
 }
-.hamburguer-menu:hover{
-    cursor: pointer;
+.icon-home, .icon-studio, .icon-nail, .icon-mesage, .icon-feedback, .icon-question{
+    color: var(--rose-claro);
+    font-size: 3rem;
+    line-height: 0;
 }
-.hamburguer-menu{
-    height: 45px;
-    width: 45px;
-    position: relative;
-}
-.hamburguer-menu article{
-    height: 5px;
-    width: 80%;
-    background-color: var(--rose);
-    border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: .3s ease;
-    z-index: 10;
-}
-.hamburguer-menu article:nth-child(1){
-    top: 25%;
-}
-.hamburguer-menu article:nth-child(3){
-    top: 75%;
-}
-.hamburguer-menu.active article:nth-child(1){
-    top: 50%;
-    transform: translate(-50%,-50%) rotate(45deg);
-}
-.hamburguer-menu.active article:nth-child(2){
-    opacity: 0;
-}
-.hamburguer-menu.active article:nth-child(3){
-    top: 50%;
-    transform: translate(-50%,-50%) rotate(-45deg);
+.active-button{
+    color: var(--rose);
 }
