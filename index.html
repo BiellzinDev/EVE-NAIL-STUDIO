@@ -8,13 +8,18 @@
     <link rel="stylesheet" href="./style.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Oxygen:wght@300;400;700&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <header id="home" class="flex-items-center-justfy-center header">
         <section class="flex-items-center-justfy-center limitador-header">
-            <article class="limiter-logo"><img src="./Images/Logo-certo.webp" alt="Logo"></article>
+            <article class="limiter-logo"><a href="#home"><img src="./Images/Logo-certo.webp" alt="Logo"></a></article>
             <article class="text-logo"></article>
         </section>
     </header>
@@ -55,21 +60,6 @@
                         <h3>Esmaltação em teste</h3>
                     </article>
             </section>
-            <!-- <article class="box-pages flex-items-center-justfy-center">
-                <button class="point"><picture><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler dot-1 icons-tabler-filled icon-tabler-point">
-	            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	            <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" />
-                </svg></picture></button>
-                <button class="point"><picture><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-point">
-	            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	            <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" />
-                </svg></picture></button>
-                <button class="point"><picture><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-point">
-	            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	            <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" />
-                </svg></picture></button>
-                
-            </article> -->
         </section>
         <section class=" frase-efeito flex-items-center-justfy-center">
             <picture class="star"><img src="./Images/alone-estrela.webp" alt=""></picture>
@@ -179,62 +169,87 @@
             </section>
             <h2 class="title-media">Siga-nos nas redes sociais</h2>
         </section>
-        <section>
+        <section class="feed">
             <h2 id="feedback">Feedback</h2>
+            <p>Sua opnião é muito importante para nós! Conte como foi sua experiência e nos ajude a melhorar cada vez mais.</p>
             <section>
                 <article>
-                    <img src="" alt="Imagem pessoa">
                     <article>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, asperiores.</p>
-                        <article>
-                            <img src="" alt="estrela 1">
-                            <img src="" alt="estrela 2">
-                            <img src="" alt="estrela 3">
-                            <img src="" alt="estrela 4">
-                            <img src="" alt="estrela 5">
-                        </article>
+                        <picture></picture>
+                        <label for="nome">Seu nome:</label>
                     </article>
-                    <article>
-                        <img src="" alt="Feedback foto 1">
-                        <img src="" alt="Feedback foto 2">
-                    </article>
+                    <input type="" placeholder="Digite seu nome completo">
                 </article>
-            </section>
                 <article>
-                    <img src="" alt="Imagem pessoa">
                     <article>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, asperiores.</p>
-                        <article>
-                            <img src="" alt="estrela 1">
-                            <img src="" alt="estrela 2">
-                            <img src="" alt="estrela 3">
-                            <img src="" alt="estrela 4">
-                            <img src="" alt="estrela 5">
-                        </article>
+                        <picture></picture>
+                        <label for="experiencia">Como foi sua experiência:</label>
                     </article>
-                    <article>
-                        <img src="" alt="Feedback foto 1">
-                        <img src="" alt="Feedback foto 2">
-                    </article>
+                    <select name="experiencia" id="experiencia">
+                        <option value="opcao">Selecione uma opção</option>
+                        <option value="excelente">Excelente</option>
+                        <option value="Muito satisfatória">Muito satisfatória</option>
+                        <option value="Satisfatória">Satisfatória</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Insatisfatória">Insatisfatória</option>
+                    </select>
                 </article>
-            </section>
                 <article>
-                    <img src="" alt="Imagem pessoa">
                     <article>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, asperiores.</p>
-                        <article>
-                            <img src="" alt="estrela 1">
-                            <img src="" alt="estrela 2">
-                            <img src="" alt="estrela 3">
-                            <img src="" alt="estrela 4">
-                            <img src="" alt="estrela 5">
-                        </article>
+                        <picture></picture>
+                        <label for="feedback">Seu comentário:</label>
                     </article>
-                    <article>
-                        <img src="" alt="Feedback foto 1">
-                        <img src="" alt="Feedback foto 2">
-                    </article>
+                    <textarea name="feedback" id="feedback" rows="5" cols="50"></textarea>
                 </article>
+                <article>
+                    <article>
+                        <picture><i class="fi fi-rr-star"></i></picture>
+                        <label for="star">Avalie seu atendimento:</label>
+                    </article>
+                    <button><i class="fi fi-rr-star"></i></button>
+                    <button><i class="fi fi-rr-star"></i></button>
+                    <button><i class="fi fi-rr-star"></i></button>
+                    <button><i class="fi fi-rr-star"></i></button>
+                    <button><i class="fi fi-rr-star"></i></button>
+                </article>
+                <button>
+                    <picture><i class="fi fi-rr-paper-plane"></i></picture>
+                    <p>Enviar Feedback</p>
+                </button>
+            </section>
+        <section class="Faq">
+            <h2 id="faq">FAQ</h2>
+            <p>Tire suas dúvidas sobre nossos serviços, agendamentos e muito mais</p>
+            <section>
+                <article>
+                    <picture><i class="fi fi-br-search"></i></picture>
+                    <input type="search">
+                </article>
+                <article>
+                    <h3></h3>
+                </article>
+                <article>
+                    <article>
+                        <picture></picture>
+                        <label for="feedback">Seu comentário:</label>
+                    </article>
+                    <textarea name="feedback" id="feedback" rows="5" cols="50"></textarea>
+                </article>
+                <article>
+                    <article>
+                        <picture><i class="fi fi-rr-star"></i></picture>
+                        <label for="star">Avalie seu atendimento:</label>
+                    </article>
+                    <button><i class="fi fi-rr-star"></i></button>
+                    <button><i class="fi fi-rr-star"></i></button>
+                    <button><i class="fi fi-rr-star"></i></button>
+                    <button><i class="fi fi-rr-star"></i></button>
+                    <button><i class="fi fi-rr-star"></i></button>
+                </article>
+                <button>
+                    <picture><i class="fi fi-rr-paper-plane"></i></picture>
+                    <p>Enviar Feedback</p>
+                </button>
             </section>
         </section>
         
