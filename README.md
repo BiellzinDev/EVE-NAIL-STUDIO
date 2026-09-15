@@ -1,4 +1,5 @@
 # 🚀 EVE NAIL DESIGN
+<img width="150" height="300" alt="iPhone-14-PRO-MAX-biellzindev github io" src="https://github.com/user-attachments/assets/73b46126-2321-4b41-ac6a-1431a795ae65" />
 
 Repositório criado com fins didáticos para melhorar meu aprendizado, com o objetivo de reunir e demonstrar componentes web reutilizáveis desenvolvidos em HTML,CSS e JavaScript.
 
@@ -51,5 +52,5 @@ O repositório contém:
 Este projeto tem fins educacionais, mas sugestões de melhorias e novas ideias são sempre bem-vindas.
 
 ---
-<img width="830" height="1692" alt="iPhone-14-PRO-MAX-biellzindev github io" src="https://github.com/user-attachments/assets/73b46126-2321-4b41-ac6a-1431a795ae65" />
+
 
