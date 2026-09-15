@@ -9,6 +9,7 @@ Este projeto serve como um portfólio prático dos conhecimentos adquiridos ao l
 
 ---
 
+
 ## ✨ Funcionalidades
 - Display Flex
 - Animações e interações com Css
@@ -50,3 +51,5 @@ O repositório contém:
 Este projeto tem fins educacionais, mas sugestões de melhorias e novas ideias são sempre bem-vindas.
 
 ---
+<img width="830" height="1692" alt="iPhone-14-PRO-MAX-biellzindev github io" src="https://github.com/user-attachments/assets/73b46126-2321-4b41-ac6a-1431a795ae65" />
+
