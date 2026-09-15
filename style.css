@@ -74,7 +74,7 @@ main{
     overflow-x: hidden;
 }
 .hero{
-    background-image: url(./Images/unhas-bege.webp);
+    background-image: url(./Images/unha-p-home-tela-inicial.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -371,9 +371,9 @@ main{
     overflow-x: hidden;
     transition: .3s ease;
 }
-    .active{
+.active{
         display: flex;
-    }
+}
 .lista a{
     text-decoration: none;
     font-size: 2rem;
@@ -403,6 +403,7 @@ main{
 }
 .box-servico img{
     width: 21.25rem;
+    height: 18.85rem;
     border-radius: 15px;
 }
 .sub-servico,.title-contato{
@@ -410,9 +411,7 @@ main{
 }
 .box-servicos{
     flex-direction: column;
-}
-.box-servicos{
-    text-align: left;
+    text-align: center;
     gap: .4rem;
 }
 .servico{
@@ -472,7 +471,7 @@ button{
     font-size: 3rem;
     line-height: 0;
 }
-.active-button{
+.active-button i{
     color: var(--rose);
 }
 .feed, .faq{
