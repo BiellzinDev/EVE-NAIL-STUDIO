@@ -7,7 +7,7 @@ const FILES_TO_CACHE = [
     "./script/nav.js",
     "./script/faq.js",
     "./script/btnEstrelas.js",
-    "./Manifesto/manifest.json"
+    "./manifest.json"
 ];
 
 self.addEventListener("install", event => {
