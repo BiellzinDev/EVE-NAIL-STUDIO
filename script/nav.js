@@ -5,6 +5,7 @@ let navegandoPorClique = false
 //variavel que armazena a seção clicada
 let secaoClicada = null
 
+
 //Criação do observador das seções
 const observer = new IntersectionObserver(
     //Quando uma seção muda sua visibilidade, o navegador executa
@@ -69,16 +70,18 @@ botoes.forEach(botao => {
     })
 })
 
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-        navigator.serviceWorker
-            .register("./service-worker.js")
-            .then(() => {
-                console.log("Service Worker registrado com sucesso!");
-            })
-            .catch(error => {
-                console.error("Erro ao registrar Service Worker:", error);
-            });
-    });
-}
+// if ("serviceWorker" in navigator) {
+//     window.addEventListener("load", () => {
+//         navigator.serviceWorker
+//             .register("./service-worker.js")
+//             .then(() => {
+//                 console.log("Service Worker registrado com sucesso!");
+//             })
+//             .catch(error => {
+//                 console.error("Erro ao registrar Service Worker:", error);
+//             });
+//     });
+// }
+
+
 

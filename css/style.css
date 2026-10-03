@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root{
     --marrom:#94654C;
     --salmao:#F89FA1;
@@ -13,7 +15,6 @@
     --rose-claro:#c58592;
     --fundo-claro:#fbf3ec;
 }
-
 *,
 ::after,
 ::before{
@@ -23,14 +24,6 @@
 }
 html{
     scroll-behavior: smooth;
-}
-body{
-    font-family: "Montserrat", sans-serif;
-    width: 100%;
-    height: 100dvh;
-    position: relative;
-    background-color: var(--fundo);
-    overflow-x: hidden;
 }
 p{
     min-width: 1rem;
@@ -48,14 +41,13 @@ h2,h3{
 }
 header{
     width: 100%;
-    height: fit-content;
+    height: 4rem;
     background: var(--fundo);
     border-radius: 0 0 15px 15px;
     position: absolute;
     z-index: 5;
 }
 .text-logo {
-    background-image: url(/Images/Texto-Logo.webp);
     width: 70%;
     height: 3.5rem;
     background-position: center;
@@ -116,7 +108,7 @@ main{
     position: absolute;
 }
 .art-bottom{
-    background-image: url(/Images/estrelas-grupo.webp);
+    background-image: url(..Images/estrelas-grupo.webp);
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -125,19 +117,6 @@ main{
     position: absolute;
     top: 0;
     z-index: 0;
-}
-.btn{
-    z-index: 2;
-    width: 14rem;
-    height: 3.1rem;
-    border-radius: 50px;
-    border: none;
-    background: var(--rose);
-    font-weight: 700;
-    font-size: 1rem;
-    text-align: center;
-    color: white;
-    gap: .5rem;
 }
 .btn:hover{
     opacity: .7;
@@ -224,41 +203,33 @@ main{
         flex: 0 0 100%;
     }
 }
-.box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8{
-    background-repeat: no-repeat;
-    background-size: cover;
+.box{
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
 }
-.box-1{
-    background-image: url(/Images/unha-para-nail-art.webp);
+.box img{
+    width: 100%;
+    object-fit: fill;
+    height: 256px;
+    border-radius: 15px;
 }
-.box-2{
-    background-image: url(/Images/esmaltação-em-gel.webp);
-    background-position: center 15%;
+figcaption{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
 }
-.box-3{
-    background-image: url(/Images/unhas-floridas.webp);
-}
-.box-4{
-    background-image: url(/Images/unhas-extensao.webp);
-}
-.box-5{
-    background-image: url(/Images/unhas-francesa.webp);
-}
-.box-6{
-    background-image: url(/Images/unhas-francesa.webp);
-}
-.box-7{
-    background-image: url(/Images/unhas-francesa.webp);
-}
-.box-8{
-    background-image: url(/Images/unhas-francesa.webp);
-}
+
 .box-unhas h3{
     color: white;
     text-shadow: 1px 1px 2px rgba(220, 28, 28, 0.8), 2px 2px 5px rgba(237, 48, 48, 0.6);
     font-size: 1rem;
     width: 50%;
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
 }
 .box-pages{
     padding: .2rem 2rem;
@@ -316,15 +287,28 @@ main{
     width: 90%;
     margin-bottom: 1rem;
 }
-.btn-whats{
-    border: none;
+.app{
     background-color: var(--whats);
+    border: none;
     color: white;
     width: 12.5rem;
     height: 3.1rem;
     border-radius: 10px;
     font-weight: 600;
     font-size: 1rem;
+}
+.btn{
+    z-index: 2;
+    width: 14rem;
+    height: 3.1rem;
+    border-radius: 50px;
+    border: none;
+    background: var(--rose);
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    gap: .5rem;
 }
 .btn-whats:hover{
     opacity: .5;
@@ -504,7 +488,6 @@ button{
 .icon-home, .icon-studio, .icon-nail, .icon-mesage, .icon-feedback, .icon-question{
     color: var(--rose-claro);
     font-size: 2.5rem;
-    line-height: 0;
 }
 .active-button i{
     color: var(--rose);
@@ -545,143 +528,7 @@ button{
     font-size: 1.2rem;
     color: var(--rose);
 }
-.limiter-label{
-    gap: .3rem;
-    align-items: flex-end;
-}
-input:focus, select:focus, textarea:focus{
-    outline: 1px solid var(--rose-claro);
-}
-select, value{
-    color: var(--rose);
-}
-label{
-    font-size: 1.5rem;
-}
-input,select{
-    width: 100%;
-    padding: .2rem .5rem;
-    height: 2.5rem;
-    border-radius: 10px;
-    border: 1px solid var(--rose-claro);
-}
-input::placeholder, select::placeholder{
-    color: var(--rose);
-}
-.caixa-feed{
-    flex-direction: column;
-    width: 100%;
-    gap: 1.5rem;
-}
-textarea{
-    padding: .2rem .5rem;
-    width: 100%;
-    height: 6rem;
-    border-radius: 10px;
-    border: 1px solid var(--rose);
-    resize: none;
-}
-textarea::placeholder{
-    color: var(--rose);
-}
-.stars{
-    gap: .5rem;
-    padding-left: 1.5rem;
-}
-.stars button{
-    border: none;
-    background: none;
-    font-size: 1.2rem;
-    color: var(--rose);
-}
-.btn-send-feed{
-    background-color: var(--rose);
-    color: white;
-    gap: .6rem;
-    width: 90%;
-    border-radius: 20px;
-    border: none;
-    height: 2.5rem;
-    margin-bottom: 1rem;
-}
-.btn-send-feed:hover{
-    background-color: var(--rose-claro);
-}
-.btn-send-feed p{
-    color: white;
-}
-.icon-plane, .icon-search{
-    font-size: 1rem;
-}
-.faq{
-    background-color: var(--fundo);
-    padding: 1rem 0;
-}
-.search{
-    border: 1px solid var(--rose);
-    border-radius: 10px;
-    justify-content: flex-end;
-    width: 90%;
-    padding-left: .5rem;
-}
-.search input{
-    border: none;
-    background: none;
-    text-align: left;
-    outline: none;
-}
-.limiter-faq{
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-}
-.accordion{
-    flex-direction: column;
-    width: 90%;
-    gap: .5rem;
-}
-.container-sanfona{
-    width: 100%;
-}
-.accordion-header, .accordion-sub{
-    width: 100%;
-    background: var(--rose);
-    border: none;
-    height: 2.5rem;
-    border-radius: 10px;
-    color: white;
-    justify-content: space-between;
-    padding: 0 .7rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-.limiter-calendar{
-    gap: .5rem;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-.accordion-sub{
-    background-color: var(--fundo-claro);
-    color: var(--rose);
-    font-size: .9rem;
-    gap: .1rem;
-    z-index: 4;
-    position: relative;
-    width: 100%;
-}
-.accordion-header span{
-    max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.accordion-body,.accordion-sub-body{
-    opacity: 0;
-    height: 0;
-}
-.accordion-body{
-    display: none;
-}
+
 .accordion-body.actived, .accordion-sub-body.actived{
     transition: 2s ease;
     height: fit-content;
@@ -691,20 +538,15 @@ textarea::placeholder{
     width: 100%;
     gap: .5rem;
 }
-.accordion-sub-body p{
-    padding: 0 .5rem;
-    text-align: left;
-    font-size: .9rem;
-    font-weight: 500;
-    position: relative;
+
+
+/* .spa-section{
+    display: none;
+    animation: fadeIn var(--transition-normal);
 }
-.btn-teste{
-    background: none;
-    border: none;
+[hidden] {
+    display: none !important;
+}
+.spa-section.active-section {
     display: flex;
-    flex-direction: column;
-}
-.btn-teste span{
-    color: var(--rose);
-    font-weight: 500;
-}
+} */

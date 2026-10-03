@@ -19,37 +19,45 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
 
+    <link rel="stylesheet" href="./Images/Logo-certo.webp">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 
     <!-- Adiciono o link com o arquivo JSON do manifesto -->
-    <link rel="manifest" href="./manifest.json">
+    <!-- <link rel="manifest" href="./manifest.json"> -->
     <!-- Faço com que identifique o thema do celular e aplique as mesmas configurações -->
-    <meta name="theme-color" content="#d98c9a">
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="apple-touch-icon" href="./Images/Logo-certo.webp">
+    <!-- <meta name="theme-color" content="#d98c9a"> -->
+    <!-- <meta name="mobile-web-app-capable" content="yes"> -->
+    <!-- <link rel="apple-touch-icon" href="./Images/Logo-certo.webp"> -->
     
 
     <script src="./script/nav.js" defer></script>
     <script src="./script/faq.js" defer></script>
     <script src="./script/btnEstrelas.js" defer></script>
-    <script src="./service-worker.js"></script>
+    <!-- <script src="./service-worker.js" defer></script> -->
+    <script src="./script/whatsApp.js" defer></script>
+    <!-- <script src="./script/spa.js" defer></script> -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
-<body>
+<body class="font-[Montserrat] w-full h-dvh relative bg-[#f3ebe3] overflow-x-hidden">
     <header class="flex-items-center-justfy-center header">
-        <section id="hero" class="flex-items-center-justfy-center limitador-header todo">
+        <section id="hero" class="flex-items-center-justfy-center limitador-header todo spa-section active-section">
             <article class="limiter-logo"><a href="#home"><img src="./Images/Logo-certo.webp" alt="Logo"></a></article>
-            <article class="text-logo"></article>
+            <article class="text-logo flex-items-center-justfy-center">
+                <picture><img src="./Images/Texto-Logo.webp" alt=""></picture>
+            </article>
         </section>
     </header>
     <nav class="nav flex-items-center-justfy-center">
-        <a href="#hero" class="comon"><i class="fi fi-rr-home icon-home"></i></a>
-        <a href="#studio" class="comon"><i class="fi fi-rr-couch icon-studio"></i></a>
-        <a href="#servico" class="comon"><i class="fi fi-rr-manicure icon-nail"></i></a>
-        <a href="#contato" class="comon"><i class="fi fi-rr-marker icon-mesage"></i></a>
-        <a href="#feedback" class="comon"><i class="fi fi-rr-memo-pad icon-feedback"></i></a>
-        <a href="#faq" class="comon"><i class="fi fi-rr-comments-question icon-question"></i></a>
-        </nav>
+        <a href="#hero" class="comon navegacao active " data-target="hero"><i class="fi fi-rr-home icon-home"></i></a>
+        <a href="#studio" class="comon navegacao" data-target="studio"><i class="fi fi-rr-couch icon-studio"></i></a>
+        <a href="#servico" class="comon navegacao" data-target="servico"><i class="fi fi-rr-manicure icon-nail"></i></a>
+        <a href="#contato" class="comon navegacao" data-target="contato"><i class="fi fi-rr-marker icon-mesage"></i></a>
+        <a href="#feedback" class="comon navegacao" data-target="feedback"><i class="fi fi-rr-memo-pad icon-feedback"></i></a>
+        <a href="#faq" class="comon navegacao" data-target="faq"><i class="fi fi-rr-comments-question icon-question"></i></a>
+    </nav>
     <main class="flex-items-center-justfy-center">
         <section class="flex-items-center-justfy-center hero">
             <picture>
@@ -59,35 +67,51 @@
                 <p class="text-hero">O espaço perfeito para você,<br> Nail art para quem ama o diferente</p>
             </article>
             <article class="bottom-hero flex-items-center-justfy-center  ">
-            <button class="btn flex-items-center-justfy-center"><span>Agende seu momento</span>
+            <button class="btn flex-items-center-justfy-center bg-(--rose)"><span>Agende seu momento</span>
             <picture><i class="fi fi-rs-arrow-right"></i></picture></button>
             </article>
         </section>
         <section class="service flex-items-center-justfy-center">
             <section class="box-service flex-items-center-justfy-center">
-                    <article class="box-unhas box-1 flex-items-center-justfy-center">
-                        <h3>Nail art e Blindagem</h3>
+                    <article class="box-unhas  flex-items-center-justfy-center">
+                        <figure class="flex-items-center-justfy-center box">
+                            <img src="./Images/Nail-art.webp" alt="Imagem de Unha">
+                            <figcaption>
+                                <h3>Nail art e Blindagem</h3>
+                            </figcaption>
+                        </figure>
                     </article>
-                    <article class="box-unhas box-2 flex-items-center-justfy-center">
-                        <h3>Esmaltação em gel</h3>
+                    <article class="box-unhas  flex-items-center-justfy-center">
+                        <figure class="flex-items-center-justfy-center box">
+                            <img src="./Images/Manutencao-alongamento.webp" alt="Imagem de Unha">
+                            <figcaption>
+                                <h3>Manutenção de Alongamento</h3>
+                            </figcaption>
+                        </figure>
                     </article>
-                    <article class="box-unhas box-3 flex-items-center-justfy-center">
-                        <h3>Manicure Tradicional</h3>
+                    <article class="box-unhas  flex-items-center-justfy-center">
+                        <figure class="flex-items-center-justfy-center box">
+                            <img src="./Images/Esmaltacao-comum.webp" alt="Imagem de Unha">
+                            <figcaption>
+                                <h3>Esmaltação Comum</h3>
+                            </figcaption>
+                        </figure>
                     </article>
-                    <article class="box-unhas box-4 flex-items-center-justfy-center">
-                        <h3>Pedicure</h3>
+                    <article class="box-unhas  flex-items-center-justfy-center">
+                        <figure class="flex-items-center-justfy-center box">
+                            <img src="./Images/Esmaltacao-em-gel.webp" alt="Imagem de Unha">
+                            <figcaption>
+                                <h3>Esmaltação em Gel</h3>
+                            </figcaption>
+                        </figure>
                     </article>
-                    <article class="box-unhas box-5 flex-items-center-justfy-center">
-                        <h3>Esmaltação Comum</h3>
-                    </article>
-                    <article class="box-unhas box-6 flex-items-center-justfy-center">
-                        <h3>Spa das Mãos e dos Pés</h3>
-                    </article>
-                    <article class="box-unhas box-7 flex-items-center-justfy-center">
-                        <h3>Manutenção de Alongamento</h3>
-                    </article>
-                    <article class="box-unhas box-8 flex-items-center-justfy-center">
-                        <h3>Remoção de alongamento ou esmaltação em gel</h3>
+                    <article class="box-unhas  flex-items-center-justfy-center">
+                        <figure class="flex-items-center-justfy-center box">
+                            <img src="./Images/Manicure-tradicional.webp" alt="Imagem de Unha">
+                            <figcaption>
+                                <h3>Manicure Tradicional</h3>
+                            </figcaption>
+                        </figure>
                     </article>
             </section>
         </section>
@@ -100,7 +124,7 @@
             <h2>Contate-nos</h2>
             <p>O caminho até seu destino</p>
             <section class="caixa-contato flex-items-center-justfy-center">
-                <article class="contato flex-items-center-justfy-center">
+                <article class="contato flex-items-center-justfy-center"> <!-- addrees-->
                     <h4>Nosso endereço:</h4>
                     <p>R. Américo Vespúcio, 12 - Sala 01</p>
                     <p>Parque Imperi al, Barueri - SP</p>
@@ -112,11 +136,11 @@
                 <article class="contato flex-items-center-justfy-center">
                     <h4>WhatsApp:</h4>
                     <p>(11) 98931-6769</p>
-                </article>
+                </article> <!-- addrees-->
             </section>
         </section>
         <section class="box-whats flex-items-center-justfy-center">
-            <button class="btn-whats">Falar no WhatsApp</button>
+            <button class="btn-whats app">Falar no WhatsApp</button>
             <picture class="whats"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-whatsapp icon-whats">
 	        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	        <path d="M18.497 4.409a10 10 0 0 1 -10.36 16.828l-.223 -.098l-4.759 .849l-.11 .011a1 1 0 0 1 -.11 0l-.102 -.013l-.108 -.024l-.105 -.037l-.099 -.047l-.093 -.058l-.014 -.011l-.012 -.007l-.086 -.073l-.077 -.08l-.067 -.088l-.056 -.094l-.034 -.07l-.04 -.108l-.028 -.128l-.012 -.102a1 1 0 0 1 0 -.125l.012 -.1l.024 -.11l.045 -.122l1.433 -3.304l-.009 -.014a10 10 0 0 1 1.549 -12.454l.215 -.203a10 10 0 0 1 13.226 -.217m-8.997 3.09a1.5 1.5 0 0 0 -1.5 1.5v1a6 6 0 0 0 6 6h1a1.5 1.5 0 0 0 0 -3h-1l-.144 .007a1.5 1.5 0 0 0 -1.128 .697l-.042 .074l-.022 -.007a4.01 4.01 0 0 1 -2.435 -2.435l-.008 -.023l.075 -.041a1.5 1.5 0 0 0 .704 -1.272v-1a1.5 1.5 0 0 0 -1.5 -1.5" />
@@ -126,9 +150,9 @@
             <h2>Como chegar?</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7318.8524275638465!2d-46.806084!3d-23.481153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefde82bc83913%3A0xe17397a729bbf3dc!2sR.%20Am%C3%A9rico%20Vesp%C3%BAcio%2C%20N%C2%B0%2012%20-%20Parque%20Imperial%2C%20Barueri%20-%20SP%2C%2006462-300!5e0!3m2!1spt-BR!2sbr!4v1789925617671!5m2!1spt-BR!2sbr" width="100%" height="336" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </section >
-        <section class="studio flex-items-center-justfy-center">
+        <section class="studio flex-items-center-justfy-center spa-section">
             <h2 id="studio" class="title-studio todo">O Studio</h2>
-            <p>O EVE NAIL STUDIO é um espaço coletivo com outras profissionais da area da beleza, </p>
+            <p>O EVE NAIL STUDIO é um espaço  dedicado para seu momento, com materiais e equipamentos de qualidade, esterealizados. Prontos para deixar suas unhas um arraso! Afinal, você já é linda, vamos realçar isso!</p>
             <picture class="box-studio">
                 <img src="./Images/Studio-cadeiras.webp" alt="Imagem das caideias">
             </picture>
@@ -136,50 +160,35 @@
                 <img src="./Images/Studio-mesas.webp" alt="Imagem das mesas">
             </picture>
         </section>
-        <section  class="servico flex-items-center-justfy-center">
+        <section  class="servico flex-items-center-justfy-center spa-section">
             <h2 id="servico" class="title-servico todo">Serviços</h2>
             <section class="box-servicos flex-items-center-justfy-center">
-                <h3 class="sub-servico">Nail art e Blindagem</h3>
+                <h3 class="sub-servico">Nail art</h3>
                 <p>Personalização das unhas por meio de desenhos, pinturas, pedrarias, efeitos, adesivos e diferentes técnicas de decoração. É uma das formas de tornar o trabalho mais criativo e exclusivo.</p>
-                <picture class="box-servico"><img src="./Images/unha-para-nail-art.webp" alt="Imagem esmaltação em gel"></picture>
+                <picture class="box-servico"><img src="./Images/Nail-art.webp" alt="Imagem esmaltação em gel"></picture>
             </section>
             <section class="box-servicos flex-items-center-justfy-center">
                 <h3 class="sub-servico">Esmaltação em Gel</h3>
-                <p>Personalização das unhas por meio de desenhos, pinturas, pedrarias, efeitos, adesivos e diferentes técnicas de decoração. É uma das formas de tornar o trabalho mais criativo e exclusivo.</p>
-                <picture class="box-servico"><img src="./Images/esmaltação-em-gel.webp" alt="Imagem esmaltação em gel"></picture>
+                <p>Aplicação de esmalte específico que é curado em cabine UV ou LED. Possui maior durabilidade e resistência em comparação ao esmalte tradicional.</p>
+                <picture class="box-servico"><img src="./Images/Esmaltacao-em-gel.webp" alt="Imagem esmaltação em gel"></picture>
             </section>
             <section class="box-servicos flex-items-center-justfy-center">
                 <h3 class="sub-servico">Manicure Tradicional</h3>
                 <p>Cuidados básicos com as unhas das mãos, incluindo corte, lixamento, remoção ou tratamento das cutículas e aplicação de esmalte.</p>
-                <picture class="box-servico"><img src="./Images/unhas-extensao.webp" alt="Imagem esmaltação em gel"></picture>
-            </section>
-            <section class="box-servicos flex-items-center-justfy-center">
-                <h3 class="sub-servico">Pedicure</h3>
-                <p>Serviço semelhante à manicure, mas realizado nas unhas dos pés. Também pode incluir cuidados com a pele e hidratação. </p>
-                <picture class="box-servico"><img src="./Images/unhas-extensao.webp" alt="Imagem esmaltação em gel"></picture>
+                <picture class="box-servico"><img src="./Images/Manicure-tradicional.webp" alt="Imagem esmaltação em gel"></picture>
             </section>
             <section class="box-servicos flex-items-center-justfy-center">
                 <h3 class="sub-servico">Esmaltação Comum</h3>
                 <p>Aplicação de esmalte tradicional nas unhas, permitindo que a cliente escolha entre diferentes cores, acabamentos e estilos.</p>
-                <picture class="box-servico"><img src="./Images/unhas-extensao.webp" alt="Imagem esmaltação em gel"></picture>
-            </section>
-            <section class="box-servicos flex-items-center-justfy-center">
-                <h3 class="sub-servico">Spa das mãos e dos pés</h3>
-                <p>Tratamento focado no cuidado e relaxamento, podendo incluir esfoliação, hidratação, massagem e cuidados especiais com a pele.</p>
-                <picture class="box-servico"><img src="./Images/unhas-francesa.webp" alt="Imagem esmaltação em gel"></picture>
+                <picture class="box-servico"><img src="./Images/Esmaltacao-comum.webp" alt="Imagem esmaltação em gel"></picture>
             </section>
             <section class="box-servicos flex-items-center-justfy-center">
                 <h3 class="sub-servico">Manutenção de alongamento</h3>
                 <p>Procedimento realizado após o crescimento da unha natural para recuperar o formato e preencher o espaço próximo à cutícula, prolongando a durabilidade do alongamento.</p>
-                <picture class="box-servico"><img src="./Images/unhas-bege.webp" alt="Imagem esmaltação em gel"></picture>
-            </section>
-            <section class="box-servicos flex-items-center-justfy-center">
-                <h3 class="sub-servico">Remoção de alongamento ou esmaltação em gel</h3>
-                <p>Retirada segura de produtos aplicados anteriormente, utilizando técnicas e ferramentas adequadas para preservar a integridade das unhas naturais. </p>
-                <picture class="box-servico"><img src="./Images/unhas-bege.webp" alt="Imagem esmaltação em gel"></picture>
+                <picture class="box-servico"><img src="./Images/Manutencao-alongamento.webp" alt="Imagem esmaltação em gel"></picture>
             </section>
         </section>
-        <section class="contato flex-items-center-justfy-center">
+        <section class="contato flex-items-center-justfy-center spa-section">
             <h2 id="contato" class="title-contato todo">Entre em contato</h2>
             <p>Sempre a disposição para promover a melhor experiência a você, agende seu horário</p>
         </section>
@@ -219,222 +228,207 @@
             </section>
             <h2 class="title-media">Siga-nos nas redes sociais</h2>
         </section>
-        <section class="feed flex-items-center-justfy-center">
+        <section class="feed flex-items-center-justfy-center spa-section">
             <h2 id="feedback" class="title-feed todo">Feedback</h2>
             <p class="p-feed">Sua opnião é muito importante para nós! Conte como foi sua experiência e nos ajude a melhorar cada vez mais.</p>
-            <section class="caixa-feed flex-items-center-justfy-center">
+            <section class="caixa-feed flex-items-center-justfy-center flex-col w-full gap-6">
                 <article class="limiter-feed flex-items-center-justfy-center">
                     <article class="box-feed flex-items-center-justfy-center">
-                        <article class="limiter-label flex-items-center-justfy-center">
+                        <article class="limiter-label flex-items-center-justfy-center gap-[.3rem] items-end">
                             <picture><i class="fi fi-rr-user icon-user"></i></picture>
-                            <label for="nome">Seu nome:</label>
+                            <label for="nome" class="text-2xl">Seu nome:</label>
                         </article>
-                        <input type="text" placeholder="Digite seu nome completo">
+                        <input type="text" placeholder="Digite seu nome completo" class="placeholder:text-[#9e3154] w-full py-1 px-2 h-10 rounded-[10px] border border-[#c58592] focus:outline-[#c58592]">
                     </article>
                 </article>
                 <article class="limiter-feed flex-items-center-justfy-center">
                     <article class="box-feed flex-items-center-justfy-center">
-                        <article class="limiter-label flex-items-center-justfy-center">
+                        <article class="limiter-label flex-items-center-justfy-center gap-[.3rem] items-end">
                             <picture><i class="fi fi-rr-smile icon-rosto"></i></picture>
-                            <label for="experiencia">Como foi sua experiência:</label>
+                            <label for="experiencia" class="text-2xl">Como foi sua experiência:</label>
                         </article>
-                        <select name="experiencia" id="experiencia">
-                            <option value="opcao" class="option">Selecione uma opção</option>
-                            <option value="excelente">Excelente</option>
-                            <option value="Muito satisfatória">Muito satisfatória</option>
-                            <option value="Satisfatória">Satisfatória</option>
-                            <option value="Regular">Regular</option>
-                            <option value="Insatisfatória">Insatisfatória</option>
+                        <select name="experiencia" id="experiencia" class="text-[#9e3154] w-full py-1 px-2 h-10 rounded-[10px] border border-[#c58592] focus:outline-[#c58592]">
+                            <option value="opcao" class="option text-[#9e3154]">Selecione uma opção</option>
+                            <option value="Muito satisfatória" class="text-[#9e3154]">Muito satisfatória</option>
+                            <option value="Satisfatória" class="text-[#9e3154]">Satisfatória</option>
+                            <option value="Insatisfatória" class="text-[#9e3154]">Insatisfatória</option>
                         </select>
                     </article>
                 </article>
                 <article class="limiter-feed flex-items-center-justfy-center">
                     <article class="box-feed flex-items-center-justfy-center">
-                        <article class="limiter-label flex-items-center-justfy-center">
+                        <article class="limiter-label flex-items-center-justfy-center gap-[.3rem] items-end">
                             <picture><i class="fi fi-rr-comment icon-feedb"></i></picture>
-                            <label for="feedback">Seu comentário:</label>
+                            <label for="feedback" class="text-2xl">Seu comentário:</label>
                         </article>
-                        <textarea name="feedback" id="feedback" placeholder="Conte-nos o que você achou do atendimento, do serviço, do ambiente...." ></textarea>
+                        <textarea name="feedback" id="feedback" placeholder="Conte-nos o que você achou do atendimento, do serviço, do ambiente...." class="text-[#9e3154] py-1 px-2 w-full h-24 rounded-[10px] border border-[#9e3154] resize-none placeholder:text-[#9e3154] focus:outline-[#c58592]" ></textarea>
                     </article>
                 </article>
                 <article class="limiter-feed flex-items-center-justfy-center">
                     <article class="box-feed flex-items-center-justfy-center">
-                        <article class="limiter-label flex-items-center-justfy-center">
-                            <label for="star">Avalie seu atendimento:</label>
+                        <article class="limiter-label flex-items-center-justfy-center gap-[.3rem] items-end">
+                            <label for="star" class="text-2xl">Avalie seu atendimento:</label>
                         </article>
-                        <article class="stars flex-items-center-justfy-center">
-                            <button class="btn-star" data-star="1"><i class="fi fi-rr-star"></i></button>
-                            <button class="btn-star" data-star="2"><i class="fi fi-rr-star"></i></button>
-                            <button class="btn-star" data-star="3"><i class="fi fi-rr-star" ></i></button>
-                            <button class="btn-star" data-star="4"><i class="fi fi-rr-star"></i></button>
-                            <button class="btn-star" data-star="5"><i class="fi fi-rr-star"></i></button>
+                        <article class="stars flex-items-center-justfy-center gap-2 pl-6">
+                            <button class="btn-star border-none bg-none text-[1.2rem] text-[#9e3154]" data-star="1"><i class="fi fi-rr-star"></i></button>
+                            <button class="btn-star border-none bg-none text-[1.2rem] text-[#9e3154]" data-star="2"><i class="fi fi-rr-star"></i></button>
+                            <button class="btn-star border-none bg-none text-[1.2rem] text-[#9e3154]" data-star="3"><i class="fi fi-rr-star" ></i></button>
+                            <button class="btn-star border-none bg-none text-[1.2rem] text-[#9e3154]" data-star="4"><i class="fi fi-rr-star"></i></button>
+                            <button class="btn-star border-none bg-none text-[1.2rem] text-[#9e3154]" data-star="5"><i class="fi fi-rr-star"></i></button>
                         </article>
                     </article>
                 </article>
-                <button class="btn-send-feed flex-items-center-justfy-center">
-                    <picture><i class="fi fi-rr-paper-plane icon-plane"></i></picture>
-                    <p>Enviar Feedback</p>
+                <button class="btn-send-feed flex-items-center-justfy-center bg-[#9e3154] text-white gap-[.6rem] w-[90%] rounded-[20px] border-none h-10 mb-4 hover:bg-[#c58592]">
+                    <picture><i class="fi fi-rr-paper-plane icon-plane text-xl"></i></picture>
+                    <p class="text-white">Enviar Feedback</p>
                 </button>
             </section>
-        <section class="faq flex-items-center-justfy-center">
+        <section class="faq flex-items-center-justfy-center spa-section bg-[#f3ebe3] py-4 px-0">
             <h2 id="faq" class="todo">FAQ</h2>
             <p class="p-faq">Tire suas dúvidas sobre nossos serviços, agendamentos e muito mais</p>
-            <section class="limiter-faq flex-items-center-justfy-center">
-                <article class="search flex-items-center-justfy-center">
-                    <picture><i class="fi fi-br-search icon-search"></i></picture>
-                    <input type="search" placeholder="Busque uma pergunta...">
-                </article>
-                <article class="container-sanfona flex-items-center-justfy-center" data-id="agendamento">
-                    <div class="accordion flex-items-center-justfy-center">
-                        <button class="accordion-header flex-items-center-justfy-center">
-                            <div class="limiter-calendar flex-items-center-justfy-center">
+            <section class="limiter-faq flex-items-center-justfy-center flex-col w-full gap-4">
+                <article class="container-sanfona flex-items-center-justfy-center w-full" data-id="agendamento">
+                    <div class="accordion flex-items-center-justfy-center flex-col w-[90%] gap-2">
+                        <button class="accordion-header flex-items-center-justfy-center w-full bg-[#9e3154] border-none h-10 rounded-xl text-white justify-between py-0 px-[.7rem] tex-[1.2rem] cursor-pointer">
+                            <div class="limiter-calendar flex-items-center-justfy-center gap-2 items-start justify-start">
                                 <picture class="calendar"><i class="fi fi-rr-calendar icon-calendar"></i></picture>
-                                <span>Agendamentos</span>
+                                <span class="max-w-full whitespace-nowrap overflow-hidden text-ellipsis">Agendamentos</span>
                             </div>
                             <i class="fi fi-sr-angle-down"></i>
                         </button>
-                        <div class="accordion-body" data-id="agendamento">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>Como faço para agendar um horário?</span>
+                        <div class="accordion-body hidden opacity-0 h-0" data-id="agendamento">
+                            <button class="accordion-sub flex-items-center-justfy-center bg-[#fbf3ec] text-[#9e3154] text-[.9rem] gap-0.5 relative w-full cursor-pointer py-0 px-3 justify-between rounded-xl h-10 border-none">
+                            <span class="w-full">Como faço para agendar um horário?</span>
                             <i class="fi fi-sr-angle-down"></i>
                             </button>
-                            <div class="accordion-sub-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
+                            <div class="accordion-sub-body opacity-[0] h-0">
+                                <p class="py-0 pr-2 text-left text-[.9rem] font-medium relative">Pelo telefone ou WhatsApp</p>
                             </div>
                         </div>
-                        <div class="accordion-body" data-id="agendamento">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>É necessário pagar algum adiantamento?</span>
+                        <div class="accordion-body hidden opacity-0 h-0" data-id="agendamento">
+                            <button class="accordion-sub flex-items-center-justfy-center bg-[#fbf3ec] text-[#9e3154] text-[.9rem] gap-0.5 relative w-full cursor-pointer py-0 px-3 justify-between rounded-xl h-10 border-none">
+                            <span class="w-full">Outras formas de contato?</span>
                             <i class="fi fi-sr-angle-down"></i>
                             </button>
-                            <div class="accordion-sub-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
+                            <div class="accordion-sub-body opacity-[0] h-0">
+                                <p class="py-0 pr-2 text-left text-[.9rem] font-medium relative">Instagram, WhatsApp, Facebook</p>
                             </div>
                         </div>
-                        <div class="accordion-body" data-id="agendamento">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>Posso remarcar ou cancelar meu horário?</span>
+                        <div class="accordion-body hidden opacity-0 h-0" data-id="agendamento">
+                            <button class="accordion-sub flex-items-center-justfy-center bg-[#fbf3ec] text-[#9e3154] text-[.9rem] gap-0.5 relative w-full cursor-pointer py-0 px-3 justify-between rounded-xl h-10 border-none">
+                            <span class="w-full">Posso remarcar ou cancelar meu horário?</span>
                             <i class="fi fi-sr-angle-down"></i>
                             </button>
-                            <div class="accordion-sub-body" hidden>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
+                            <div class="accordion-sub-body opacity-[0] h-0" hidden>
+                                <p class="py-0 pr-2 text-left text-[.9rem] font-medium relative">Sim, desde que seja avisado com 24h de antecedência</p>
                             </div>
                         </div>
                     </div>
                 </article>
 
-                <article class="container-sanfona flex-items-center-justfy-center" data-id="servicos">
-                    <div class="accordion flex-items-center-justfy-center">
-                        <button class="accordion-header flex-items-center-justfy-center">
-                            <div class="limiter-calendar flex-items-center-justfy-center">
+                <article class="container-sanfona flex-items-center-justfy-center w-full" data-id="servicos">
+                    <div class="accordion flex-items-center-justfy-center flex-col w-[90%] gap-2">
+                        <button class="accordion-header flex-items-center-justfy-center w-full bg-[#9e3154] border-none h-10 rounded-xl text-white justify-between py-0 px-[.7rem] tex-[1.2rem] cursor-pointer">
+                            <div class="limiter-calendar flex-items-center-justfy-center gap-2 items-start justify-start">
                                 <picture class="calendar"><i class="fi fi-rs-finger-nail"></i></picture>
-                                <span>Procedimentos</span>
+                                <span class="max-w-full whitespace-nowrap overflow-hidden text-ellipsis">Procedimentos</span>
                             </div>
                             <i class="fi fi-sr-angle-down"></i>
                         </button>
-                        <div class="accordion-body" data-id="servicos">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>Quanto tempo dura o procedimento?</span>
+                        <div class="accordion-body hidden opacity-0 h-0" data-id="servicos">
+                            <button class="accordion-sub flex-items-center-justfy-center bg-[#fbf3ec] text-[#9e3154] text-[.9rem] gap-0.5 relative w-full cursor-pointer py-0 px-3 justify-between rounded-xl h-10 border-none">
+                            <span class="w-full">Quanto tempo dura o procedimento?</span>
                             <i class="fi fi-sr-angle-down"></i>
                             </button>
-                            <div class="accordion-sub-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
+                            <div class="accordion-sub-body opacity-[0] h-0">
+                                <p class="py-0 pr-2 text-left text-[.9rem] font-medium relative">Varia do procedimento mas em torno de 30 min a 01:30 min.</p>
                             </div>
                         </div>
-                        <div class="accordion-body" data-id="servicos">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>Quais os cuidados após a aplicação?</span>
+                        <div class="accordion-body hidden opacity-0 h-0" data-id="servicos">
+                            <button class="accordion-sub flex-items-center-justfy-center bg-[#fbf3ec] text-[#9e3154] text-[.9rem] gap-0.5 relative w-full cursor-pointer py-0 px-3 justify-between rounded-xl h-10 border-none">
+                            <span class="w-full">Quais os cuidados após a aplicação?</span>
                             <i class="fi fi-sr-angle-down"></i>
                             </button>
-                            <div class="accordion-sub-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
+                            <div class="accordion-sub-body opacity-[0] h-0">
+                                <p class="py-0 pr-2 text-left text-[.9rem] font-medium relative">Mantenha as unhas hidratadas com cremes e ingestão de água.</p>
                             </div>
                         </div>
-                        <div class="accordion-body" data-id="servicos">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>Vocês trabalham com alongamento?</span>
+                        <div class="accordion-body hidden opacity-0 h-0" data-id="servicos">
+                            <button class="accordion-sub flex-items-center-justfy-center bg-[#fbf3ec] text-[#9e3154] text-[.9rem] gap-0.5 relative w-full cursor-pointer py-0 px-3 justify-between rounded-xl h-10 border-none">
+                            <span class="w-full">Vocês trabalham com alongamento?</span>
                             <i class="fi fi-sr-angle-down"></i>
                             </button>
-                            <div class="accordion-sub-body" hidden>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
+                            <div class="accordion-sub-body opacity-[0] h-0" hidden>
+                                <p class="py-0 pr-2 text-left text-[.9rem] font-medium relative">Sim, para mais informações acesse a seção serviços.</p>
                             </div>
                         </div>
                     </div>
                 </article>
 
-                <article class="container-sanfona flex-items-center-justfy-center" data-id="pagamento">
-                    <div class="accordion flex-items-center-justfy-center">
-                        <button class="accordion-header flex-items-center-justfy-center">
-                            <div class="limiter-calendar flex-items-center-justfy-center">
+                <article class="container-sanfona flex-items-center-justfy-center w-full" data-id="pagamento">
+                    <div class="accordion flex-items-center-justfy-center flex-col w-[90%] gap-2">
+                        <button class="accordion-header flex-items-center-justfy-center w-full bg-[#9e3154] border-none h-10 rounded-xl text-white justify-between py-0 px-[.7rem] tex-[1.2rem] cursor-pointer">
+                            <div class="limiter-calendar flex-items-center-justfy-center gap-2 items-start justify-start">
                                 <picture class="calendar"><i class="fi fi-br-credit-card"></i></picture>
-                                <span>Pagamentos</span>
+                                <span class="max-w-full whitespace-nowrap overflow-hidden text-ellipsis">Pagamentos</span>
                             </div>
                             <i class="fi fi-sr-angle-down"></i>
                         </button>
-                        <div class="accordion-body" data-id="pagamento">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>Quais as formas de pagamento?</span>
+                        <div class="accordion-body hidden opacity-0 h-0" data-id="pagamento">
+                            <button class="accordion-sub flex-items-center-justfy-center bg-[#fbf3ec] text-[#9e3154] text-[.9rem] gap-0.5 relative w-full cursor-pointer py-0 px-3 justify-between rounded-xl h-10 border-none">
+                            <span class="w-full">Quais as formas de pagamento?</span>
                             <i class="fi fi-sr-angle-down"></i>
                             </button>
-                            <div class="accordion-sub-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
+                            <div class="accordion-sub-body opacity-[0] h-0">
+                                <p class="py-0 pr-2 text-left text-[.9rem] font-medium relative">Débito, Crédito e Pix.</p>
                             </div>
                         </div>
-                        <div class="accordion-body" data-id="pagamento">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>Vocês aceitam Pix?</span>
+                        <div class="accordion-body hidden opacity-0 h-0" data-id="pagamento">
+                            <button class="accordion-sub flex-items-center-justfy-center bg-[#fbf3ec] text-[#9e3154] text-[.9rem] gap-0.5 relative w-full cursor-pointer py-0 px-3 justify-between rounded-xl h-10 border-none">
+                            <span class="w-full">É possível parcelar o pagamento?</span>
                             <i class="fi fi-sr-angle-down"></i>
                             </button>
-                            <div class="accordion-sub-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
-                            </div>
-                        </div>
-                        <div class="accordion-body" data-id="pagamento">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>É possível parcelar o pagamento?</span>
-                            <i class="fi fi-sr-angle-down"></i>
-                            </button>
-                            <div class="accordion-sub-body" hidden>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
+                            <div class="accordion-sub-body opacity-[0] h-0" hidden>
+                                <p class="py-0 pr-2 text-left text-[.9rem] font-medium relative">Sim, em até 3x sem juros.</p>
                             </div>
                         </div>
                     </div>
                 </article>
 
-                <article class="container-sanfona flex-items-center-justfy-center" data-id="local">
-                    <div class="accordion flex-items-center-justfy-center">
-                        <button class="accordion-header flex-items-center-justfy-center">
-                            <div class="limiter-calendar flex-items-center-justfy-center">
+                <article class="container-sanfona flex-items-center-justfy-center w-full" data-id="local">
+                    <div class="accordion flex-items-center-justfy-center flex-col w-[90%] gap-2">
+                        <button class="accordion-header flex-items-center-justfy-center w-full bg-[#9e3154] border-none h-10 rounded-xl text-white justify-between py-0 px-[.7rem] tex-[1.2rem] cursor-pointer">
+                            <div class="limiter-calendar flex-items-center-justfy-center gap-2 items-start justify-start">
                                 <picture class="calendar"><i class="fi fi-rs-marker"></i></picture>
-                                <span>Endereço</span>
+                                <span class="max-w-full whitespace-nowrap overflow-hidden text-ellipsis">Endereço</span>
                             </div>
                             <i class="fi fi-sr-angle-down"></i>
                         </button>
-                        <div class="accordion-body" data-id="local">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>Onde fica o studio?</span>
+                        <div class="accordion-body hidden opacity-0 h-0" data-id="local">
+                            <button class="accordion-sub flex-items-center-justfy-center bg-[#fbf3ec] text-[#9e3154] text-[.9rem] gap-0.5 relative w-full cursor-pointer py-0 px-3 justify-between rounded-xl h-10 border-none">
+                            <span class="w-full">Onde fica o studio?</span>
                             <i class="fi fi-sr-angle-down"></i>
                             </button>
-                            <div class="accordion-sub-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
+                            <div class="accordion-sub-body opacity-[0] h-0">
+                                <p class="py-0 pr-2 text-left text-[.9rem] font-medium relative">R. Américo Vespúcio, 12 - Sala 01.</p>
                             </div>
                         </div>
-                        <div class="accordion-body" data-id="local">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>Qual o horário de funcionamento?</span>
+                        <div class="accordion-body hidden opacity-0 h-0" data-id="local">
+                            <button class="accordion-sub flex-items-center-justfy-center bg-[#fbf3ec] text-[#9e3154] text-[.9rem] gap-0.5 relative w-full cursor-pointer py-0 px-3 justify-between rounded-xl h-10 border-none">
+                            <span class="w-full">Qual o horário de funcionamento?</span>
                             <i class="fi fi-sr-angle-down"></i>
                             </button>
-                            <div class="accordion-sub-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
+                            <div class="accordion-sub-body opacity-[0] h-0">
+                                <p class="py-0 pr-2 text-left text-[.9rem] font-medium relative">Terça à sábado, das 08:00 às 18:00.</p>
                             </div>
                         </div>
-                        <div class="accordion-body" data-id="local">
-                            <button class="accordion-sub flex-items-center-justfy-center">
-                            <span>Há estacionamento próximo?</span>
+                        <div class="accordion-body hidden opacity-[0] h-0" data-id="local">
+                            <button class="accordion-sub flex-items-center-justfy-center bg-[#fbf3ec] text-[#9e3154] text-[.9rem] gap-0.5 relative w-full cursor-pointer py-0 px-3 justify-between rounded-xl h-10 border-none">
+                            <span class="w-full">Há estacionamento próximo?</span>
                             <i class="fi fi-sr-angle-down"></i>
                             </button>
-                            <div class="accordion-sub-body" hidden>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptates!</p>
+                            <div class="accordion-sub-body opacity-[0] h-0" hidden>
+                                <p class="py-0 pr-2 text-left text-[.9rem] font-medium relative">Estacionamento no local.</p>
                             </div>
                         </div>
                     </div>
@@ -446,6 +440,7 @@
     <footer >
         <p>&copy; Página Desenvolvida na FIEB TECH "EVE NAIL DESIGN"</p>
     </footer>
+
 </body>
 
 </html>
